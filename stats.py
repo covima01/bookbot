@@ -19,3 +19,12 @@ def char_count(text):
             characters[lower_char] += 1
             
     return characters
+
+def sorted_list(characters):
+   sorted_dictionary = dict(sorted(characters.items(), key=lambda x: x[1], reverse=True))
+   result = []
+   for character in sorted_dictionary:
+      if character.isalpha():
+         result.append(f"{character}: {sorted_dictionary[character]}")
+   
+   return result
